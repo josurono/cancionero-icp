@@ -81,19 +81,27 @@ const CANCIONERO = {
           "Los pasos del hombre,",
           "Y Él aprueba su camino,",
           "Cuando el hombre cayere no quedará postrado,",
-          "Porque Jehová sostiene, sostiene su mano.",
+          "Porque Jehová sostiene, sostiene su mano."
+        ]},
+        { tipo: "coro", lineas: [
           "Encomienda a Jehová, tu camino y confía en Él y Él hará,",
           "Guarda silencio ante Jehová,",
-          "Y espera en Él y Él hará.",
+          "Y espera en Él y Él hará."
+        ]},
+        { tipo: "estrofa", lineas: [
           "Joven fui y he envejecido",
           "Y no he visto justo desamparado.",
           "Ni su descendencia",
           "Que mendigue pan,",
           "Porque Jehová sostiene,",
-          "Sostiene su mano.",
+          "Sostiene su mano."
+        ]},
+        { tipo: "coro", lineas: [
           "Encomienda a Jehová, tu camino y confía en Él y Él hará,",
-          "Guarda silencio ante Jehová",
-          "y espera en Él y Él hará,",
+          "Guarda silencio ante Jehová,",
+          "Y espera en Él y Él hará."
+        ]},
+        { tipo: "final", lineas: [
           "y espera en Él y Él hará,",
           "y espera en Él y Él hará."
         ]}
