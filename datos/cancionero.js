@@ -92,7 +92,7 @@ const CANCIONERO = {
           "Porque Jehová sostiene,",
           "Sostiene su mano.",
           "Encomienda a Jehová, tu camino y confía en Él y Él hará,",
-          "Guarda silencio ante Jehová //y espera en Él y Él hará//."
+          "Guarda silencio ante Jehová y espera en Él y Él hará."
         ]}
       ]
     },
@@ -107,13 +107,20 @@ const CANCIONERO = {
       etiquetas: [],
       bloques: [
         { tipo: "estrofa", lineas: [
-          "/Sendas Dios hará, donde piensas que no hay,",
+          "Sendas Dios hará, donde piensas que no hay,",
           "Él obra en maneras que,",
           "No podemos entender.",
           "Él me guiará, a su lado estaré,",
           "Amor y fuerza me dará,",
           "Un camino hará",
-          "Donde no lo hay/.",
+          "Donde no lo hay.",
+          "Sendas Dios hará, donde piensas que no hay,",
+          "Él obra en maneras que,",
+          "No podemos entender.",
+          "Él me guiará, a su lado estaré,",
+          "Amor y fuerza me dará,",
+          "Un camino hará",
+          "Donde no lo hay.",
           "Por camino en la soledad,",
           "Me guiará,",
           "Agua en el desierto encontraré.",
@@ -133,7 +140,7 @@ const CANCIONERO = {
       etiquetas: [],
       bloques: [
         { tipo: "estrofa", lineas: [
-          "/Fuerte Dios, consolador,",
+          "Fuerte Dios, consolador,",
           "Príncipe de paz.",
           "Gran Señor, vencedor,",
           "Siempre vives y siempre reinarás.",
@@ -141,8 +148,19 @@ const CANCIONERO = {
           "Eres todo para mí,",
           "La creación canta de Ti.",
           "Yo te exalto, Dios te exalto,",
-          "Te exalto Cristo mi Rey/.",
-          "//Te exalto Cristo mi Rey//."
+          "Te exalto Cristo mi Rey.",
+          "Fuerte Dios, consolador,",
+          "Príncipe de paz.",
+          "Gran Señor, vencedor,",
+          "Siempre vives y siempre reinarás.",
+          "Yo te exalto, Dios te exalto.",
+          "Eres todo para mí,",
+          "La creación canta de Ti.",
+          "Yo te exalto, Dios te exalto,",
+          "Te exalto Cristo mi Rey.",
+          "Te exalto Cristo mi Rey.",
+          "Te exalto Cristo mi Rey.",
+          "Te exalto Cristo mi Rey."
         ]}
       ]
     },
@@ -178,11 +196,16 @@ const CANCIONERO = {
           "Te adoro a tí, te adoro a tí."
         ]},
         { tipo: "estrofa", lineas: [
-          "/Y al estar aquí, delante de Ti te adoraré.",
+          "Y al estar aquí, delante de Ti te adoraré.",
           "Postrado ante Ti, mi corazón te adora, oh Dios.",
           "Y siempre quiero estar para adorar y contemplar tu santidad,",
           "Te adoro a Ti Señor,",
-          "Te adoro a tí/."
+          "Te adoro a tí.",
+          "Y al estar aquí, delante de Ti te adoraré.",
+          "Postrado ante Ti, mi corazón te adora, oh Dios.",
+          "Y siempre quiero estar para adorar y contemplar tu santidad,",
+          "Te adoro a Ti Señor,",
+          "Te adoro a tí."
         ]}
       ]
     },
@@ -298,10 +321,14 @@ const CANCIONERO = {
       etiquetas: [],
       bloques: [
         { tipo: "coro", lineas: [
-          "/Dios es mi conductor,",
+          "Dios es mi conductor,",
           "Él dirige mi vida",
           "Todas las situaciones",
-          "Dependen de Él/."
+          "Dependen de Él.",
+          "Dios es mi conductor,",
+          "Él dirige mi vida",
+          "Todas las situaciones",
+          "Dependen de Él."
         ]},
         { tipo: "estrofa", lineas: [
           "Verdaderamente su presencia,",
@@ -311,10 +338,14 @@ const CANCIONERO = {
           "Un largo tiempo."
         ]},
         { tipo: "coro", lineas: [
-          "/Dios es mi conductor,",
+          "Dios es mi conductor,",
           "Él dirige mi vida",
           "Todas las situaciones",
-          "Dependen de Él/."
+          "Dependen de Él.",
+          "Dios es mi conductor,",
+          "Él dirige mi vida",
+          "Todas las situaciones",
+          "Dependen de Él."
         ]},
         { tipo: "estrofa", lineas: [
           "Aunque ande en sombras,",
@@ -348,10 +379,14 @@ const CANCIONERO = {
           "Es porque yo sigo a quién es fiel."
         ]},
         { tipo: "coro", lineas: [
-          "/No miro circunstancias, no, no,",
+          "No miro circunstancias, no, no,",
           "Yo miro su amor,",
           "No me guío por vista,",
-          "Alegre voy/."
+          "Alegre voy.",
+          "No miro circunstancias, no, no,",
+          "Yo miro su amor,",
+          "No me guío por vista,",
+          "Alegre voy."
         ]},
         { tipo: "estrofa", lineas: [
           "Y aunque la higuera no florezca,",
@@ -361,10 +396,14 @@ const CANCIONERO = {
           "Tengo en quién confiar."
         ]},
         { tipo: "coro", lineas: [
-          "/No miro circunstancias, no, no,",
+          "No miro circunstancias, no, no,",
           "Yo miro su amor,",
           "No me guío por vista,",
-          "Alegre voy/."
+          "Alegre voy.",
+          "No miro circunstancias, no, no,",
+          "Yo miro su amor,",
+          "No me guío por vista,",
+          "Alegre voy."
         ]}
       ]
     },
@@ -404,14 +443,22 @@ const CANCIONERO = {
       etiquetas: [],
       bloques: [
         { tipo: "estrofa", lineas: [
-          "/Cuán bello es el Señor,",
+          "Cuán bello es el Señor,",
           "Cuán hermoso es el Señor.",
           "Cuán bello es el Señor,",
-          "Hoy le quiero adorar/.",
-          "/La belleza de mi Señor,",
+          "Hoy le quiero adorar.",
+          "Cuán bello es el Señor,",
+          "Cuán hermoso es el Señor.",
+          "Cuán bello es el Señor,",
+          "Hoy le quiero adorar.",
+          "La belleza de mi Señor,",
           "Nunca se agotará,",
           "La hermosura de mi Señor,",
-          "Siempre resplandecerá/."
+          "Siempre resplandecerá.",
+          "La belleza de mi Señor,",
+          "Nunca se agotará,",
+          "La hermosura de mi Señor,",
+          "Siempre resplandecerá."
         ]}
       ]
     },
@@ -435,10 +482,14 @@ const CANCIONERO = {
           "Tomando forma de siervo,",
           "Hasta su vida entregar",
           "Y en una cruz terminar.",
-          "/Más Dios, a lo sumo lo exaltó y su nombre engrandeció.",
+          "Más Dios, a lo sumo lo exaltó y su nombre engrandeció.",
           "Para que ante su autoridad,",
           "Toda rodilla se doble",
-          "Y toda lengua confiese que Jesús es el Señor/."
+          "Y toda lengua confiese que Jesús es el Señor.",
+          "Más Dios, a lo sumo lo exaltó y su nombre engrandeció.",
+          "Para que ante su autoridad,",
+          "Toda rodilla se doble",
+          "Y toda lengua confiese que Jesús es el Señor."
         ]}
       ]
     },
@@ -453,12 +504,18 @@ const CANCIONERO = {
       etiquetas: [],
       bloques: [
         { tipo: "estrofa", lineas: [
-          "/Que maravilla es tener una familia,",
-          "Una familia en Cristo Jesús/.",
-          "/Una familia unida,",
+          "Que maravilla es tener una familia,",
+          "Una familia en Cristo Jesús.",
+          "Que maravilla es tener una familia,",
+          "Una familia en Cristo Jesús.",
+          "Una familia unida,",
           "Una familia real,",
           "Una familia que ama,",
-          "Una familia celestial/."
+          "Una familia celestial.",
+          "Una familia unida,",
+          "Una familia real,",
+          "Una familia que ama,",
+          "Una familia celestial."
         ]}
       ]
     },
@@ -524,13 +581,20 @@ const CANCIONERO = {
       etiquetas: [],
       bloques: [
         { tipo: "estrofa", lineas: [
-          "/Él es mi paz,",
+          "Él es mi paz,",
           "Ha borrado todos mis temores,",
-          "Él es mi paz, Él es mi paz/.",
-          "/Hecho toda mi ansiedad",
+          "Él es mi paz, Él es mi paz.",
+          "Él es mi paz,",
+          "Ha borrado todos mis temores,",
+          "Él es mi paz, Él es mi paz.",
+          "Hecho toda mi ansiedad",
           "Sobre Él,",
           "Pues Él cuida de mi,",
-          "Él es mi paz, Él es mi paz/."
+          "Él es mi paz, Él es mi paz.",
+          "Hecho toda mi ansiedad",
+          "Sobre Él,",
+          "Pues Él cuida de mi,",
+          "Él es mi paz, Él es mi paz."
         ]}
       ]
     },
@@ -641,8 +705,10 @@ const CANCIONERO = {
       etiquetas: [],
       bloques: [
         { tipo: "estrofa", lineas: [
-          "/Celebrad a Cristo celebrad.",
-          "Celebrad a Cristo celebrad/.",
+          "Celebrad a Cristo celebrad.",
+          "Celebrad a Cristo celebrad.",
+          "Celebrad a Cristo celebrad.",
+          "Celebrad a Cristo celebrad.",
           "Resucitó, resucitó,",
           "Él vive para siempre.",
           "Resucitó, resucitó."
@@ -705,8 +771,10 @@ const CANCIONERO = {
           "Hay libertad."
         ]},
         { tipo: "estrofa", lineas: [
-          "/Al que el Hijo, hace libre,",
-          "Es libre, en verdad/."
+          "Al que el Hijo, hace libre,",
+          "Es libre, en verdad.",
+          "Al que el Hijo, hace libre,",
+          "Es libre, en verdad."
         ]},
         { tipo: "coro", lineas: [
           "Rompió mis cadenas,",
@@ -804,7 +872,9 @@ const CANCIONERO = {
           "Jesús Hijo de Dios.",
           "El amado del cielo",
           "En la cruz murió,",
-          "//Digno es el Señor//."
+          "Digno es el Señor.",
+          "Digno es el Señor.",
+          "Digno es el Señor."
         ]}
       ]
     },
@@ -826,10 +896,14 @@ const CANCIONERO = {
           "Mi única verdad está en Ti,",
           "Eres mi luz y mi salvación.",
           "Mi único amor eres tu Señor y por siempre te alabaré.",
-          "/Tu eres todo poderoso,",
+          "Tu eres todo poderoso,",
           "Eres grande y majestuoso,",
           "Eres fuerte, invencible,",
-          "Y no hay nadie como Tú/."
+          "Y no hay nadie como Tú.",
+          "Tu eres todo poderoso,",
+          "Eres grande y majestuoso,",
+          "Eres fuerte, invencible,",
+          "Y no hay nadie como Tú."
         ]}
       ]
     },
@@ -864,10 +938,14 @@ const CANCIONERO = {
           "Este pueblo canta, cuando el mundo llora,",
           "Y cuando está en sombras,",
           "Este pueblo es luz.",
-          "/Porque todos ellos,",
+          "Porque todos ellos,",
           "Claramente han visto,",
           "La luz que manaba,",
-          "Del rostro de Cristo/."
+          "Del rostro de Cristo.",
+          "Porque todos ellos,",
+          "Claramente han visto,",
+          "La luz que manaba,",
+          "Del rostro de Cristo."
         ]}
       ]
     },
@@ -888,10 +966,14 @@ const CANCIONERO = {
           "Mi Dios, cual buen alfarero,",
           "Quebrántame, transfórmame,",
           "Moldeame a Tú imagen Señor.",
-          "/Quiero ser más como Tú,",
+          "Quiero ser más como Tú,",
           "Ver la vida como Tú,",
           "Saturarme de tu Espíritu",
-          "Y reflejar al mundo Tú amor/."
+          "Y reflejar al mundo Tú amor.",
+          "Quiero ser más como Tú,",
+          "Ver la vida como Tú,",
+          "Saturarme de tu Espíritu",
+          "Y reflejar al mundo Tú amor."
         ]}
       ]
     },
@@ -1066,8 +1148,10 @@ const CANCIONERO = {
           "Glorioso redentor y Rey, te adoramos."
         ]},
         { tipo: "estrofa", lineas: [
-          "/A Él sea la gloria y el poder,",
-          "Todo es de Él y para Él/.",
+          "A Él sea la gloria y el poder,",
+          "Todo es de Él y para Él.",
+          "A Él sea la gloria y el poder,",
+          "Todo es de Él y para Él.",
           "Tú eres el Dios que adoramos,",
           "Todopoderoso y soberano,",
           "Grande en misericordia y poder para salvar.",
@@ -1130,7 +1214,9 @@ const CANCIONERO = {
           "Necesita ser cambiado, Señor.",
           "Porque todo lo que hay,",
           "Dentro de mí corazón,",
-          "//Necesita más de Ti//."
+          "Necesita más de Ti.",
+          "Necesita más de Ti.",
+          "Necesita más de Ti."
         ]}
       ]
     },
@@ -1155,8 +1241,10 @@ const CANCIONERO = {
           "Y el presente que está acá."
         ]},
         { tipo: "coro", lineas: [
-          "/Enseñame a vivir el hoy de tal manera que mañana, no tenga que",
-          "Reprocharme el ayer/.",
+          "Enseñame a vivir el hoy de tal manera que mañana, no tenga que",
+          "Reprocharme el ayer.",
+          "Enseñame a vivir el hoy de tal manera que mañana, no tenga que",
+          "Reprocharme el ayer.",
           "Enseñame"
         ]},
         { tipo: "estrofa", lineas: [
@@ -1173,8 +1261,10 @@ const CANCIONERO = {
           "Cuando tenga que elegir."
         ]},
         { tipo: "coro", lineas: [
-          "/Enseñame a vivir el hoy de tal manera que mañana, no tenga que",
-          "Reprocharme el ayer/.",
+          "Enseñame a vivir el hoy de tal manera que mañana, no tenga que",
+          "Reprocharme el ayer.",
+          "Enseñame a vivir el hoy de tal manera que mañana, no tenga que",
+          "Reprocharme el ayer.",
           "Enseñame"
         ]}
       ]
@@ -1309,7 +1399,7 @@ const CANCIONERO = {
       etiquetas: [],
       bloques: [
         { tipo: "estrofa", lineas: [
-          "/Él es la voz que mis oídos abrió,",
+          "Él es la voz que mis oídos abrió,",
           "La libertad que mis cadenas rompió.",
           "Él es la luz que mi alma oscura iluminó,",
           "Él es Jesús toda mi vida",
@@ -1319,7 +1409,18 @@ const CANCIONERO = {
           "Puede transformar al más",
           "Pecador,",
           "Darle una nueva vida y su perdón.",
-          "Él hizo que vuelva a latir mi corazón/."
+          "Él hizo que vuelva a latir mi corazón.",
+          "Él es la voz que mis oídos abrió,",
+          "La libertad que mis cadenas rompió.",
+          "Él es la luz que mi alma oscura iluminó,",
+          "Él es Jesús toda mi vida",
+          "Transformó.",
+          "Él hizo cambiar mi odio en amor,",
+          "Convierte en alegría mi dolor.",
+          "Puede transformar al más",
+          "Pecador,",
+          "Darle una nueva vida y su perdón.",
+          "Él hizo que vuelva a latir mi corazón."
         ]}
       ]
     },
@@ -1369,7 +1470,8 @@ const CANCIONERO = {
           "Mejor es un día en la casa de Dios.",
           "Que mil años lejos de Él.",
           "Prefiero un rincón en la casa de Dios.",
-          "/Que todo el palacio de un Rey/."
+          "Que todo el palacio de un Rey.",
+          "Que todo el palacio de un Rey."
         ]},
         { tipo: "coro", lineas: [
           "Ven conmigo a la casa de Dios.",
@@ -1378,13 +1480,15 @@ const CANCIONERO = {
           "Estando aquí en la casa de Dios.",
           "Alegraremos su corazón.",
           "Le brindaremos ofrendas de obediencia y amor.",
-          "/En la casa de Dios oh oh oh/."
+          "En la casa de Dios oh oh oh.",
+          "En la casa de Dios oh oh oh."
         ]},
         { tipo: "estrofa", lineas: [
           "Arde mi alma, arde de amor,",
           "Por aquel que me dió la vida.",
           "Por eso le anhela mi corazón,",
-          "/Anhela de su compañía/."
+          "Anhela de su compañía.",
+          "Anhela de su compañía."
         ]},
         { tipo: "coro", lineas: [
           "Ven conmigo a la casa de Dios.",
@@ -1393,7 +1497,8 @@ const CANCIONERO = {
           "Estando aquí en la casa de Dios.",
           "Alegraremos su corazón.",
           "Le brindaremos ofrendas de obediencia y amor.",
-          "/En la casa de Dios oh oh oh/."
+          "En la casa de Dios oh oh oh.",
+          "En la casa de Dios oh oh oh."
         ]},
         { tipo: "estrofa", lineas: [
           "En la casa de Dios."
@@ -1533,10 +1638,12 @@ const CANCIONERO = {
           "Hoy nos acercamos sin temor.",
           "Él es el agua que al beber,",
           "Nunca más tendremos sed.",
-          "/Jesucristo basta/.",
+          "Jesucristo basta.",
+          "Jesucristo basta.",
           "Mi castigo recibió",
           "Y su herencia me entregó.",
-          "/Jesucristo basta/."
+          "Jesucristo basta.",
+          "Jesucristo basta."
         ]},
         { tipo: "estrofa", lineas: [
           "Fuimos alcanzados,",
@@ -1549,20 +1656,27 @@ const CANCIONERO = {
           "Hoy nos acercamos sin temor.",
           "Él es el agua que al beber,",
           "Nunca más tendremos sed.",
-          "/Jesucristo basta/.",
+          "Jesucristo basta.",
+          "Jesucristo basta.",
           "Mi castigo recibió",
           "Y su herencia me entregó.",
-          "/Jesucristo basta/."
+          "Jesucristo basta.",
+          "Jesucristo basta."
         ]},
         { tipo: "estrofa", lineas: [
-          "/Tal y como somos nos amó",
-          "Hoy nos acercamos sin temor sin temor/.",
+          "Tal y como somos nos amó",
+          "Hoy nos acercamos sin temor sin temor.",
+          "Tal y como somos nos amó",
+          "Hoy nos acercamos sin temor sin temor.",
           "Él es el agua que al beber,",
           "Nunca más tendremos sed.",
-          "/Jesucristo basta/.",
+          "Jesucristo basta.",
+          "Jesucristo basta.",
           "Mi castigo recibió",
           "Y su herencia me entregó.",
-          "//Jesucristo basta//.",
+          "Jesucristo basta.",
+          "Jesucristo basta.",
+          "Jesucristo basta.",
           "Ahora hay un futuro",
           "Y esperanza fiel,",
           "En su amor confiamos,",
@@ -1581,10 +1695,14 @@ const CANCIONERO = {
       etiquetas: [],
       bloques: [
         { tipo: "estrofa", lineas: [
-          "/Guárdame, oh Señor,",
+          "Guárdame, oh Señor,",
           "Porque en tí he confiado.",
           "Oh alma mía, dijiste a Jehová:",
-          "Tú eres mi Señor; no hay para mí bien fuera de Ti/."
+          "Tú eres mi Señor; no hay para mí bien fuera de Ti.",
+          "Guárdame, oh Señor,",
+          "Porque en tí he confiado.",
+          "Oh alma mía, dijiste a Jehová:",
+          "Tú eres mi Señor; no hay para mí bien fuera de Ti."
         ]}
       ]
     },
@@ -1599,16 +1717,24 @@ const CANCIONERO = {
       etiquetas: [],
       bloques: [
         { tipo: "estrofa", lineas: [
-          "/Al único que es digno de recibir,",
+          "Al único que es digno de recibir,",
           "Gloria y honra, fuerza y poder.",
           "Al Dios y Padre eternal,",
           "Invisible pero real,",
-          "A Él hoy ministramos loor/.",
-          "/Te coronamos",
-          "Señor y Rey Jesús/.",
+          "A Él hoy ministramos loor.",
+          "Al único que es digno de recibir,",
+          "Gloria y honra, fuerza y poder.",
+          "Al Dios y Padre eternal,",
+          "Invisible pero real,",
+          "A Él hoy ministramos loor.",
+          "Te coronamos",
+          "Señor y Rey Jesús.",
+          "Te coronamos",
+          "Señor y Rey Jesús.",
           "Adoramos tu nombre,",
           "Nos rendimos a tus pies,",
-          "/Consagramos todo nuestro ser a Ti/."
+          "Consagramos todo nuestro ser a Ti.",
+          "Consagramos todo nuestro ser a Ti."
         ]}
       ]
     },
@@ -1669,7 +1795,8 @@ const CANCIONERO = {
           "Porque Él me ha dado el poder,",
           "Porque Él me ha dado la victoria,",
           "Él es mi Rey.",
-          "/A Cristo he proclamado Rey/."
+          "A Cristo he proclamado Rey.",
+          "A Cristo he proclamado Rey."
         ]}
       ]
     },
@@ -1684,10 +1811,14 @@ const CANCIONERO = {
       etiquetas: [],
       bloques: [
         { tipo: "estrofa", lineas: [
-          "/Aquel que nos amó, testigo fiel exaltaré.",
+          "Aquel que nos amó, testigo fiel exaltaré.",
           "Al que es principio y fin,",
           "Al gran yo soy",
-          "Adoraré/."
+          "Adoraré.",
+          "Aquel que nos amó, testigo fiel exaltaré.",
+          "Al que es principio y fin,",
+          "Al gran yo soy",
+          "Adoraré."
         ]},
         { tipo: "coro", lineas: [
           "A Jesús mi Señor,",
@@ -1743,7 +1874,9 @@ const CANCIONERO = {
           "Se cubrirá, como las aguas cubren la mar."
         ]},
         { tipo: "estrofa", lineas: [
-          "//Como las aguas cubren la mar//."
+          "Como las aguas cubren la mar.",
+          "Como las aguas cubren la mar.",
+          "Como las aguas cubren la mar."
         ]}
       ]
     },
@@ -1758,14 +1891,22 @@ const CANCIONERO = {
       etiquetas: [],
       bloques: [
         { tipo: "estrofa", lineas: [
-          "/Bendice alma mía al Señor,",
+          "Bendice alma mía al Señor,",
           "No te olvides de sus beneficios.",
           "Acuérdate de dónde te sacó,",
           "Te sacó, te sacó.",
           "No te olvides que Él te libró,",
           "No te olvides que Él te salvó,",
-          "/Puso tus pies sobre peña",
-          "Y una nueva canción te dio//."
+          "Puso tus pies sobre peña",
+          "Y una nueva canción te dio.",
+          "Bendice alma mía al Señor,",
+          "No te olvides de sus beneficios.",
+          "Acuérdate de dónde te sacó,",
+          "Te sacó, te sacó.",
+          "No te olvides que Él te libró,",
+          "No te olvides que Él te salvó,",
+          "Puso tus pies sobre peña",
+          "Y una nueva canción te dio."
         ]}
       ]
     },
@@ -1788,8 +1929,10 @@ const CANCIONERO = {
           "Cuando todo alrededor es",
           "Sombras,",
           "Al lado de tu luz.",
-          "/Te adoro a tí, te adoro a tí,",
-          "La razón por la cual yo vivo es para adorarte/."
+          "Te adoro a tí, te adoro a tí,",
+          "La razón por la cual yo vivo es para adorarte.",
+          "Te adoro a tí, te adoro a tí,",
+          "La razón por la cual yo vivo es para adorarte."
         ]}
       ]
     },
@@ -1896,7 +2039,7 @@ const CANCIONERO = {
           "Poderosos, príncipe de paz.",
           "Padre eterno, con nosotros,",
           "Luz del mundo, Cristo Emanuel.",
-          "(/Aleluya, Aleluya, Aleluya/)",
+          "(Aleluya, Aleluya, Aleluya)",
           "Aleluya, gloria en las alturas,",
           "Gozo a las naciones,",
           "Cristo el Señor."
@@ -1914,8 +2057,10 @@ const CANCIONERO = {
       etiquetas: [],
       bloques: [
         { tipo: "estrofa", lineas: [
-          "/Reunidos aquí para alabar al Señor,",
-          "Nuevamente aquí en unidad/.",
+          "Reunidos aquí para alabar al Señor,",
+          "Nuevamente aquí en unidad.",
+          "Reunidos aquí para alabar al Señor,",
+          "Nuevamente aquí en unidad.",
           "Algo hermoso ha de acontecer,",
           "Algo tiene Dios para Ti.",
           "Reunidos aquí,",
@@ -1967,7 +2112,10 @@ const CANCIONERO = {
           "Sepulcro dónde tu victoria?",
           "Si Cristo con su muerte te venció del pecado Él nos liberó",
           "Y ha reclamado su victoria la tumba no lo pudo retener",
-          "///Él vive hoy///.",
+          "Él vive hoy.",
+          "Él vive hoy.",
+          "Él vive hoy.",
+          "Él vive hoy.",
           "Glorioso el día que de la muerte Él resucitó."
         ]}
       ]
