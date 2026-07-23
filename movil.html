@@ -131,6 +131,11 @@ main{
   font-size:.6875rem; font-weight:700; letter-spacing:.13em;
   text-transform:uppercase; color:var(--acento);
 }
+.bloque .veces{
+  display:inline-block; margin-left:.35rem; padding:.05rem .35rem;
+  border:1px solid var(--acento); border-radius:.6rem;
+  font-size:.625rem; letter-spacing:.06em;
+}
 .bloque p{
   margin:0; font-size:1.125rem; line-height:1.65;
 }
@@ -268,8 +273,11 @@ function verCancion(res, guardar){
       html += '<div class="alcoro">' + esc(b.etiqueta) + '</div>';
       return;
     }
+    /* "×2": el bloque se canta dos veces seguidas. Se muestra una sola vez con
+       la marca, en vez de imprimir la misma estrofa dos veces al hilo. */
+    const veces = (b.veces > 1) ? ' <span class="veces">&times;' + b.veces + '</span>' : '';
     html += '<div class="bloque' + (b.clase === 'coro' ? ' coro' : '') + '">' +
-            '<span class="etq">' + esc(b.etiqueta) + '</span>' +
+            '<span class="etq">' + esc(b.etiqueta) + veces + '</span>' +
             '<p>' + b.lineas.map(esc).join('<br>') + '</p></div>';
   });
 
