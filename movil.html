@@ -196,7 +196,12 @@ window.__ICP_fallo = function(a){ window.__ICP_FALLOS[a] = true; };
 
 <!-- 3. Mismos datos que la proyección. Una colección rota no tumba la otra. -->
 <script src="datos/cancionero.js" onerror="window.__ICP_fallo('datos/cancionero.js')"></script>
+
+<!-- HIMNARIO: aún no existe el documento de origen. Descomentar junto con su
+     tomar() cuando se genere datos/himnario.js.
 <script src="datos/himnario.js"   onerror="window.__ICP_fallo('datos/himnario.js')"></script>
+-->
+
 
 <!-- 4. Vista -->
 <script>
@@ -233,9 +238,11 @@ function tomar(nombre, archivo, leer){
 tomar('Cancionero','datos/cancionero.js', function(){
   return (typeof CANCIONERO !== 'undefined') ? CANCIONERO : null;
 });
+/* Descomentar con el <script> de arriba cuando llegue el himnario.
 tomar('Himnario','datos/himnario.js', function(){
   return (typeof HIMNARIO !== 'undefined') ? HIMNARIO : null;
 });
+*/
 
 CAT.avisos.forEach(function(a){
   const d = document.createElement('div');
