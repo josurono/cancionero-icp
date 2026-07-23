@@ -1307,8 +1307,7 @@ const CANCIONERO = {
           "¿Quién le dio consejo al Señor?",
           "¿Quién cuestiona lo que Él habló?",
           "¿Quién al sabio Dios puede enseñar?",
-          "¿Quién comprende su gran",
-          "Majestad?"
+          "¿Quién comprende su gran Majestad?"
         ]},
         { tipo: "coro", lineas: [
           "Contempla a Dios,",
