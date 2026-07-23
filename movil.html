@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0E2833">
+<meta name="description" content="Letras del Cancionero y el Himnario · Iglesia Cristiana en Piriápolis">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icono.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icono.svg">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Cancionero">
+<title>Cancionero ICP</title>
+
+<style>
+/* ══════════════════════════════════════════════════════════════════════════
+   movil.html — vista de LECTURA
+   Corre en https:// (hospedado). Comparte datos y lib/nucleo.js con la
+   proyección, pero NO su presentación: acá se lee de corrido en una pantalla
+   chica, así que sans-serif, fondo claro y bloques enteros con sus etiquetas.
+
+   Tamaños en rem a propósito: si la persona configuró "texto grande" en el
+   sistema, esto lo respeta. En px lo pisaríamos, y mucha gente mayor de la
+   congregación depende de esa configuración.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+:root{
+  --fondo:#F7F7F1;
+  --papel:#FFFFFF;
+  --tinta:#0E2833;          /* 15:1 sobre el fondo */
+  --tinta-suave:#4A6570;    /* 6.9:1 */
+  --acento:#2C6072;         /* teal oscurecido: el #5194A7 da 3.2:1 y no llega a AA */
+  --borde:rgba(14,40,51,.12);
+  --sombra:0 1px 3px rgba(14,40,51,.08);
+  --resalte:rgba(44,96,114,.10);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --fondo:#0E2833;
+    --papel:#123340;
+    --tinta:#F4F4E9;
+    --tinta-suave:#9FBFC9;  /* 7.9:1 sobre el fondo */
+    --acento:#A3CDD4;
+    --borde:rgba(163,205,212,.16);
+    --sombra:none;
+    --resalte:rgba(163,205,212,.14);
+  }
+}
+
+*{box-sizing:border-box;}
+html{ -webkit-text-size-adjust:100%; }   /* no fijamos font-size: manda el sistema */
+body{
+  margin:0;
+  background:var(--fondo);
+  color:var(--tinta);
+  font-family:system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height:1.6;
+  overflow-wrap:break-word;
+}
+
+/* ── Barra de búsqueda ─────────────────────────────────────────────────── */
+header{
+  position:sticky; top:0; z-index:10;
+  background:var(--fondo);
+  padding:.6rem .9rem calc(.6rem + env(safe-area-inset-top, 0px));
+  padding-top:calc(.6rem + env(safe-area-inset-top, 0px));
+  border-bottom:1px solid var(--borde);
+}
+#campo{
+  width:100%; padding:.7rem .9rem;
+  font:inherit; font-size:1.0625rem;
+  color:var(--tinta); background:var(--papel);
+  border:1px solid var(--borde); border-radius:.6rem;
+  box-shadow:var(--sombra);
+}
+#campo:focus{outline:2px solid var(--acento); outline-offset:1px;}
+#campo::placeholder{color:var(--tinta-suave); opacity:.75;}
+
+main{
+  max-width:38rem; margin:0 auto;
+  padding:1rem .9rem calc(3rem + env(safe-area-inset-bottom, 0px));
+}
+
+/* ── Avisos ────────────────────────────────────────────────────────────── */
+.aviso{
+  background:#7a2b12; color:#ffeee6;
+  padding:.6rem .9rem; font-size:.875rem; text-align:center;
+}
+#pista{
+  color:var(--tinta-suave); font-size:.9375rem;
+  padding:.4rem .1rem 0;
+}
+
+/* ── Resultados ────────────────────────────────────────────────────────── */
+.grupo{margin-top:1.1rem;}
+.grupo h2{
+  margin:0 0 .35rem; font-size:.75rem; font-weight:700;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--acento);
+  border-bottom:1px solid var(--borde); padding-bottom:.25rem;
+}
+.res{
+  display:flex; gap:.75rem; align-items:baseline;
+  padding:.7rem .6rem; border-radius:.45rem;
+  cursor:pointer; -webkit-tap-highlight-color:transparent;
+}
+.res:active{background:var(--resalte);}
+.res .clave{
+  color:var(--acento); font-weight:700; font-variant-numeric:tabular-nums;
+  min-width:3.4rem; font-size:.9375rem;
+}
+.res .tit{flex:1;}
+.res .ctx{
+  display:block; font-size:.875rem; color:var(--tinta-suave);
+  font-style:italic; margin-top:.1rem;
+}
+
+/* ── Canción ───────────────────────────────────────────────────────────── */
+.cabecera{margin-bottom:1.4rem;}
+.cabecera .num{
+  color:var(--acento); font-weight:700; font-size:.875rem;
+  letter-spacing:.06em;
+}
+.cabecera h1{
+  margin:.15rem 0 .2rem; font-size:1.5rem; line-height:1.25; font-weight:700;
+}
+.cabecera .meta{color:var(--tinta-suave); font-size:.875rem;}
+
+.bloque{margin:0 0 1.5rem;}
+.bloque .etq{
+  display:inline-block; margin-bottom:.3rem;
+  font-size:.6875rem; font-weight:700; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--acento);
+}
+.bloque p{
+  margin:0; font-size:1.125rem; line-height:1.65;
+}
+.bloque.coro{
+  padding:.75rem .9rem; border-left:3px solid var(--acento);
+  background:var(--papel); border-radius:0 .45rem .45rem 0;
+  box-shadow:var(--sombra);
+}
+/* "al coro": la repetición no se reimprime, se marca — como en el cancionero
+   de papel. La proyección sí las mantiene expandidas. */
+.alcoro{
+  margin:0 0 1.5rem; padding:.5rem .9rem;
+  border-left:3px dashed var(--acento);
+  color:var(--acento); font-size:.8125rem; font-weight:700;
+  letter-spacing:.13em; text-transform:uppercase;
+}
+.vacio{color:var(--tinta-suave); padding:2rem 0; text-align:center;}
+.vacio strong{display:block; font-size:1.125rem; color:var(--tinta); margin-bottom:.4rem;}
+
+/* ── Aviso de versión nueva (el bug #1 de las PWA) ────────────────────── */
+#actualizar{
+  position:fixed; left:.75rem; right:.75rem;
+  bottom:calc(.75rem + env(safe-area-inset-bottom, 0px));
+  z-index:20; display:none;
+  background:var(--tinta); color:var(--fondo);
+  padding:.85rem 1rem; border-radius:.6rem;
+  box-shadow:0 6px 24px rgba(0,0,0,.28);
+  font-size:.9375rem; text-align:center; cursor:pointer;
+  border:none; width:auto; font-family:inherit;
+}
+#actualizar.on{display:block;}
+#actualizar b{text-decoration:underline;}
+</style>
+</head>
+
+<body>
+
+<header>
+  <input id="campo" type="search" autocomplete="off" spellcheck="false"
+         enterkeyhint="search" placeholder="15  ·  c15  ·  h300  ·  cuan grande"
+         aria-label="Buscar por número, código o texto">
+</header>
+
+<div id="avisos"></div>
+
+<main>
+  <div id="pista"></div>
+  <div id="contenido"></div>
+</main>
+
+<button id="actualizar" type="button">
+  Hay una versión nueva — <b>tocá para actualizar</b>
+</button>
+
+<!-- 1. Recolector de fallos, antes que los datos -->
+<script>
+window.__ICP_FALLOS = {};
+window.__ICP_fallo = function(a){ window.__ICP_FALLOS[a] = true; };
+</script>
+
+<!-- 2. Misma lógica que la proyección: normalización, búsqueda, determinismo -->
+<script src="lib/nucleo.js" onerror="window.__ICP_fallo('lib/nucleo.js')"></script>
+
+<!-- 3. Mismos datos que la proyección. Una colección rota no tumba la otra. -->
+<script src="datos/cancionero.js" onerror="window.__ICP_fallo('datos/cancionero.js')"></script>
+<script src="datos/himnario.js"   onerror="window.__ICP_fallo('datos/himnario.js')"></script>
+
+<!-- 4. Vista -->
+<script>
+(function(){
+'use strict';
+
+const $ = function(id){ return document.getElementById(id); };
+const elCampo = $('campo'), elPista = $('pista'), elCont = $('contenido'),
+      elAvisos = $('avisos'), elActualizar = $('actualizar');
+
+const CLAVE_ULTIMA = 'icp.ultima';
+
+function esc(s){
+  return String(s).replace(/[&<>"]/g, function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];
+  });
+}
+
+if (typeof NUCLEO === 'undefined'){
+  elCont.innerHTML = '<div class="vacio"><strong>Falta lib/nucleo.js</strong>' +
+                     'No se puede mostrar el cancionero. Avisale al que mantiene el sitio.</div>';
+  return;
+}
+
+/* ── Catálogo (mismo patrón defensivo que index.html) ─────────────────── */
+const CAT = new NUCLEO.Catalogo();
+
+function tomar(nombre, archivo, leer){
+  if (window.__ICP_FALLOS[archivo]){ CAT.registrarFallo(nombre, archivo); return; }
+  let col = null;
+  try { col = leer(); } catch(e){ col = null; }
+  CAT.agregar(nombre, archivo, col);
+}
+tomar('Cancionero','datos/cancionero.js', function(){
+  return (typeof CANCIONERO !== 'undefined') ? CANCIONERO : null;
+});
+tomar('Himnario','datos/himnario.js', function(){
+  return (typeof HIMNARIO !== 'undefined') ? HIMNARIO : null;
+});
+
+CAT.avisos.forEach(function(a){
+  const d = document.createElement('div');
+  d.className = 'aviso';
+  d.textContent = 'No se pudo cargar el ' + a.nombre + '. Se muestra el resto.';
+  elAvisos.appendChild(d);
+});
+
+/* ════════════════════════════════════════════════════════════════════════
+   CANCIÓN — bloques enteros, sin diapositivas
+   El compilador de la proyección parte en diapositivas; acá se ignora ese
+   corte a propósito: en el celular se lee de corrido.
+   ════════════════════════════════════════════════════════════════════════ */
+function verCancion(res, guardar){
+  if (!res) return false;
+  const it = res.item;
+
+  /* El colapso de coros ("al coro") vive en lib/nucleo.js: lo comparten esta
+     vista y herramientas/pdf.html, y dos copias divergirían. */
+  let html = '';
+  NUCLEO.paraLectura(it).forEach(function(b){
+    if (b.clase === 'alcoro'){
+      html += '<div class="alcoro">' + esc(b.etiqueta) + '</div>';
+      return;
+    }
+    html += '<div class="bloque' + (b.clase === 'coro' ? ' coro' : '') + '">' +
+            '<span class="etq">' + esc(b.etiqueta) + '</span>' +
+            '<p>' + b.lineas.map(esc).join('<br>') + '</p></div>';
+  });
+
+  if (!html) html = '<div class="vacio"><strong>Sin letra cargada</strong>' +
+                    esc(res.clave) + ' todavía no tiene texto.</div>';
+
+  elCont.innerHTML =
+    '<div class="cabecera">' +
+      '<div class="num">' + esc(res.clave.toUpperCase()) + ' · ' + esc(res.coleccion) + '</div>' +
+      '<h1>' + esc(res.titulo) + '</h1>' +
+      ((it.autor || it.referencia)
+        ? '<div class="meta">' + esc([it.autor, it.referencia].filter(Boolean).join(' · ')) + '</div>'
+        : '') +
+    '</div>' + html;
+
+  elPista.textContent = '';
+  document.title = res.clave.toUpperCase() + ' · ' + res.titulo;
+  if (guardar !== false){
+    try { localStorage.setItem(CLAVE_ULTIMA, res.clave); } catch(e){}
+  }
+  window.scrollTo(0, 0);
+  return true;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   BÚSQUEDA — misma lógica y mismo determinismo que la proyección
+   ════════════════════════════════════════════════════════════════════════ */
+function buscar(txt){
+  if (!txt.trim()){ restaurar(); return; }
+  const r = CAT.buscar(txt);
+
+  if (r.mensaje){
+    elPista.textContent = r.mensaje;
+    elCont.innerHTML = '';
+    return;
+  }
+  elPista.textContent = r.ambiguo
+    ? r.eleccion.clave + ' y ' + r.alterna.map(function(x){ return x.clave; }).join(', ') +
+      ' tienen el mismo número — tocá el que buscás'
+    : r.planos.length + (r.planos.length === 1 ? ' resultado' : ' resultados');
+
+  let html = '';
+  r.grupos.forEach(function(g){
+    html += '<div class="grupo"><h2>' + esc(g.coleccion) + '</h2>';
+    g.resultados.forEach(function(res){
+      html += '<div class="res" data-clave="' + esc(res.clave) + '">' +
+              '<span class="clave">' + esc(res.clave) + '</span>' +
+              '<span class="tit">' + esc(res.titulo) +
+              (res.contexto ? '<span class="ctx">' + esc(res.contexto) + '</span>' : '') +
+              '</span></div>';
+    });
+    html += '</div>';
+  });
+  elCont.innerHTML = html;
+}
+
+elCont.addEventListener('click', function(ev){
+  const fila = ev.target.closest ? ev.target.closest('.res') : null;
+  if (!fila) return;
+  const res = CAT.porCodigo(fila.getAttribute('data-clave'));
+  if (verCancion(res)){
+    elCampo.value = '';
+    elCampo.blur();          // que se cierre el teclado y se vea la letra
+  }
+});
+
+elCampo.addEventListener('input', function(){ buscar(elCampo.value); });
+elCampo.addEventListener('search', function(){ buscar(elCampo.value); });
+
+/* ── Arranque: última canción abierta (localStorage acá SÍ es confiable) ── */
+function restaurar(){
+  let clave = null;
+  try { clave = localStorage.getItem(CLAVE_ULTIMA); } catch(e){}
+  const res = clave ? CAT.porCodigo(clave) : null;
+  if (res){ verCancion(res, false); return; }
+  bienvenida();
+}
+
+function bienvenida(){
+  document.title = 'Cancionero ICP';
+  elPista.textContent = '';
+  const cuales = CAT.nombres().join(' y ');
+  elCont.innerHTML = '<div class="vacio"><strong>Escribí el número</strong>' +
+    'El que dirige lo dice en voz alta. Podés escribir <b>15</b>, o <b>c15</b> y <b>h300</b> ' +
+    'para ir directo, o parte del título o de la letra.' +
+    (cuales ? '<p style="margin-top:1rem">' + esc(cuales) + '</p>' : '') + '</div>';
+}
+
+if (CAT.vacio()){
+  elCont.innerHTML = '<div class="vacio"><strong>No se pudo cargar el cancionero</strong>' +
+                     'Probá de nuevo con señal.</div>';
+} else {
+  restaurar();
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   SERVICE WORKER
+   Solo en https:// (o localhost). En file:// registrar tira error, y la
+   proyección justamente corre en file:// — de ahí la regla del proyecto.
+   ════════════════════════════════════════════════════════════════════════ */
+const seguro = (location.protocol === 'https:' ||
+                location.hostname === 'localhost' ||
+                location.hostname === '127.0.0.1');
+
+if ('serviceWorker' in navigator && seguro){
+  window.addEventListener('load', function(){
+    navigator.serviceWorker.register('sw.js').then(function(reg){
+
+      function ofrecer(worker){
+        elActualizar.classList.add('on');
+        elActualizar.onclick = function(){
+          elActualizar.classList.remove('on');
+          worker.postMessage({ tipo: 'ACTUALIZAR' });
+        };
+      }
+
+      /* Ya había una versión esperando de una visita anterior. */
+      if (reg.waiting && navigator.serviceWorker.controller) ofrecer(reg.waiting);
+
+      reg.addEventListener('updatefound', function(){
+        const nuevo = reg.installing;
+        if (!nuevo) return;
+        nuevo.addEventListener('statechange', function(){
+          /* controller existente = ya había una versión corriendo, o sea que
+             esto es una ACTUALIZACIÓN y no la primera instalación. */
+          if (nuevo.state === 'installed' && navigator.serviceWorker.controller){
+            ofrecer(nuevo);
+          }
+        });
+      });
+    }).catch(function(e){
+      console.warn('[icp] no se registró el service worker:', e);
+    });
+
+    /* Cuando el worker nuevo toma el control, recargar una sola vez. */
+    let recargando = false;
+    navigator.serviceWorker.addEventListener('controllerchange', function(){
+      if (recargando) return;
+      recargando = true;
+      location.reload();
+    });
+  });
+} else {
+  console.log('[icp] sin service worker (protocolo ' + location.protocol +
+              '). Es lo esperado fuera de https.');
+}
+
+})();
+</script>
+</body>
+</html>

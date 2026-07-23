@@ -1,0 +1,41 @@
+{
+  "name": "Cancionero ICP",
+  "short_name": "Cancionero",
+  "description": "Letras del Cancionero y el Himnario de la Iglesia Cristiana en Piriápolis. Funciona sin señal.",
+  "lang": "es-UY",
+  "dir": "ltr",
+  "start_url": "./movil.html",
+  "scope": "./",
+  "id": "/cancionero-icp",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F4F4E9",
+  "theme_color": "#0E2833",
+  "categories": ["books", "lifestyle"],
+  "icons": [
+    {
+      "src": "./assets/icono-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icono-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icono-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./assets/icono.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
