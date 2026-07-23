@@ -546,8 +546,7 @@ const CANCIONERO = {
           "Toda mi culpa ya cubierta está.",
           "Toda mi deuda,",
           "Quedó saldada,",
-          "En la persona del Cordero",
-          "Inmortal."
+          "En la persona del Cordero Inmortal."
         ]},
         { tipo: "coro", lineas: [
           "Salvación, camino angosto,",
@@ -680,8 +679,7 @@ const CANCIONERO = {
           "De tu amor has derramado en mi corazón.",
           "No sabré agradecerte,",
           "Lo que has hecho por mí,",
-          "Solo puedo darte ahora mi",
-          "Corazón."
+          "Solo puedo darte ahora mi Corazón."
         ]},
         { tipo: "coro", lineas: [
           "Gracias, gracias Señor,",
@@ -1412,23 +1410,19 @@ const CANCIONERO = {
           "Él es la voz que mis oídos abrió,",
           "La libertad que mis cadenas rompió.",
           "Él es la luz que mi alma oscura iluminó,",
-          "Él es Jesús toda mi vida",
-          "Transformó.",
+          "Él es Jesús toda mi vida Transformó.",
           "Él hizo cambiar mi odio en amor,",
           "Convierte en alegría mi dolor.",
-          "Puede transformar al más",
-          "Pecador,",
+          "Puede transformar al más Pecador,",
           "Darle una nueva vida y su perdón.",
           "Él hizo que vuelva a latir mi corazón.",
           "Él es la voz que mis oídos abrió,",
           "La libertad que mis cadenas rompió.",
           "Él es la luz que mi alma oscura iluminó,",
-          "Él es Jesús toda mi vida",
-          "Transformó.",
+          "Él es Jesús toda mi vida Transformó.",
           "Él hizo cambiar mi odio en amor,",
           "Convierte en alegría mi dolor.",
-          "Puede transformar al más",
-          "Pecador,",
+          "Puede transformar al más Pecador,",
           "Darle una nueva vida y su perdón.",
           "Él hizo que vuelva a latir mi corazón."
         ]}
@@ -1614,8 +1608,7 @@ const CANCIONERO = {
         ]},
         { tipo: "estrofa", lineas: [
           "No promete solo días soleados,",
-          "En tu vida habrán muchas",
-          "Tormentas.",
+          "En tu vida habrán muchas Tormentas.",
           "Pero Él te ayudará con tu carga.",
           "Grande recompensa Él te dará."
         ]},
@@ -1936,8 +1929,7 @@ const CANCIONERO = {
           "Y tu dignidad excede las riquezas de éste mundo.",
           "Cuando alcanzo a tu corazón,",
           "Cuando ya estoy en tu amor,",
-          "Cuando todo alrededor es",
-          "Sombras,",
+          "Cuando todo alrededor es Sombras,",
           "Al lado de tu luz.",
           "Te adoro a tí, te adoro a tí,",
           "La razón por la cual yo vivo es para adorarte.",
@@ -2091,8 +2083,7 @@ const CANCIONERO = {
       bloques: [
         { tipo: "estrofa", lineas: [
           "¿Por qué buscas en la tumba a aquel que vivo está?",
-          "Recuerda su promesa me",
-          "Levantaré.",
+          "Recuerda su promesa me Levantaré.",
           "La piedra removida",
           "Su cuerpo no se halló",
           "Ha llegado el tercer día",

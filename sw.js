@@ -18,7 +18,7 @@
      · el resto    → CACHE-FIRST. Es la app; cambia solo cuando sube CACHE.
    ========================================================================== */
 
-const CACHE = 'icp-v9';
+const CACHE = 'icp-v10';
 
 /* La app. No se precachea index.html: la proyección no se usa desde el celular. */
 const APP = [
