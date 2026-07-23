@@ -1,4 +1,4 @@
-/* ============================================================================
+﻿/* ============================================================================
    sw.js — Service Worker · SOLO para movil.html (https://)
    ----------------------------------------------------------------------------
    Regla del proyecto: file:// → SIN service worker. https:// → CON service
@@ -18,7 +18,7 @@
      · el resto    → CACHE-FIRST. Es la app; cambia solo cuando sube CACHE.
    ========================================================================== */
 
-const CACHE = 'icp-v5';
+const CACHE = 'icp-v6';
 
 /* La app. No se precachea index.html: la proyección no se usa desde el celular. */
 const APP = [

@@ -92,7 +92,10 @@ const CANCIONERO = {
           "Porque Jehová sostiene,",
           "Sostiene su mano.",
           "Encomienda a Jehová, tu camino y confía en Él y Él hará,",
-          "Guarda silencio ante Jehová y espera en Él y Él hará."
+          "Guarda silencio ante Jehová",
+          "y espera en Él y Él hará,",
+          "y espera en Él y Él hará,",
+          "y espera en Él y Él hará."
         ]}
       ]
     },
@@ -2039,7 +2042,8 @@ const CANCIONERO = {
           "Poderosos, príncipe de paz.",
           "Padre eterno, con nosotros,",
           "Luz del mundo, Cristo Emanuel.",
-          "(Aleluya, Aleluya, Aleluya)",
+          "Aleluya, Aleluya, Aleluya",
+          "Aleluya, Aleluya, Aleluya",
           "Aleluya, gloria en las alturas,",
           "Gozo a las naciones,",
           "Cristo el Señor."
